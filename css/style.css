@@ -16,13 +16,19 @@ header{
     background-color: rgba(0, 0, 255, 0.756);
     padding: 10px 0px;
 }
+@media(max-width:768px)
+{
+    header{
+        width: 100%;
+    }
+}
 .header-content{
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
 }
 .header-content .brand{
-    font-size: 32px;
+    font-size: 29px;
     text-decoration: none;
     color:#FFF;
 }
