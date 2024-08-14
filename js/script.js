@@ -81,7 +81,7 @@ let products=[
         qty:1
     }
 ]
-localStorage.setItem("products",JSON.stringify(products.join("")))
+localStorage.setItem("products",JSON.stringify(products))
 
 
 drawItems=function (products){
@@ -101,7 +101,7 @@ drawItems=function (products){
 })
   allProducts.innerHTML=y
 }
-drawItems(products)
+drawItems(products.join(""))
 
 
 let badge=document.querySelector(".badge")
