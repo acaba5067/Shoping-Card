@@ -18,6 +18,9 @@ html{
         margin: auto;
 
     }
+    .products{
+        margin-left: 100px;
+    }
 }
 
 header{
