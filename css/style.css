@@ -14,8 +14,12 @@ html{
 {
     .cont
     {
-        width: 750px;
+        width: 700px;
 
+    }
+    .products
+    {
+        margin: auto  !important;
     }
 
 }
