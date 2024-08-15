@@ -87,7 +87,7 @@ localStorage.setItem("products",JSON.stringify(products))
 drawItems=function (products){
  y=products.map((item)=>{
 
-    return `<div class=" col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 mt-3  mx-auto">
+    return `<div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-3  mx-auto">
            <div class="card" style="width:300px">
             <img class="card-img-top" src="${item.imageUrl}" alt="Card image" style="width:100%">
             <div class="card-body">
@@ -99,9 +99,9 @@ drawItems=function (products){
     </div>
     </div>`
 })
-  allProducts.innerHTML=y
+  allProducts.innerHTML=y.join("")
 }
-drawItems(products.join(""))
+drawItems(products)
 
 
 let badge=document.querySelector(".badge")

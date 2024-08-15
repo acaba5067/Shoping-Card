@@ -10,6 +10,16 @@ html{
     scroll-behavior: smooth;
     
 }
+@media(max-width:768px)
+{
+    .cont
+    {
+        width: 750px;
+
+    }
+
+}
+
 header{
     height: 70px;
     width: 100%;
