@@ -18,8 +18,8 @@ html{
         margin: auto;
 
     }
-    .products{
-        margin-left: 100px;
+    .products .card{
+        margin-left: 200px !important;
     }
 }
 
