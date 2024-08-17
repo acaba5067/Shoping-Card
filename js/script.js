@@ -117,28 +117,35 @@ if(addedItem){
     badge.innerHTML=addedItem.length
 }
 
-let allItems=[]
+
 if(localStorage.getItem("username"))
 {
     function addToCart(id)
     {
         let choosenItem=products.find((item)=>item.id===id);
-        let item=allItems.find(i =>i.id===choosenItem.id)
+        let item=addedItem.some(i =>i.id===choosenItem.id)
         if(item){
-            choosenItem.qty+=1
-           choosenItem.price*=choosenItem.qty
+           
+            addedItem=addedItem.map((p)=>{
+                if(p.id===choosenItem.id)
+                {
+                    choosenItem.qty+=1
+                    choosenItem.price*=choosenItem.qty
+                }
+                return p
+            })
 
         }else{
-             allItems.push(choosenItem)
+             addedItem.push(choosenItem)
         }
           cartProductsDiv.innerHTML=""
-          allItems.forEach((item)=>{
+          addedItem.forEach((item)=>{
              cartProductsDiv.innerHTML+=`<p>${item.title} ${item.qty} ${item.price}</p>`
           })
         
         
        
-       addedItem=[...addedItem,choosenItem]
+      // addedItem=[...addedItem,choosenItem]
        let unique= getUnique(addedItem,"id")
        localStorage.setItem("productsInCart",JSON.stringify(unique)) 
         let cartProductsLength=document.querySelectorAll(".carts_products div p")
